@@ -1,0 +1,23 @@
+[project]
+name = "py-erl-interface"
+version = "0.1.0"
+description = "Python C extension generator for Erlang's erl_interface"
+readme = "readme.md"
+authors = [
+    {name = "Alexander Dodson"}
+]
+
+dependencies = [
+    "cffi",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["example"]
+
+[tool.setuptools.package-data]
+py_erl_interface = ["pyei.cdef"]
