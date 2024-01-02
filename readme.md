@@ -17,7 +17,7 @@ If someone finds this and wants to use it on Windows, it may not be too hard to 
 5. `lib` will have all of the functions from the cdef, while `ffi` is a special object from cffi that can help create custom types from the cdef in addition to a ton of useful Python/C interop utilities, which will be needed to interact with the wrapped functions.
 
 ## Use as a script
-You must point this at the erl_interface directory of an Erlang/OTP installation by setting the PYEI_PATH environment variable. For example:
+You must point this at the erl_interface directory of an Erlang/OTP installation by setting the `PYEI_OTP_PATH` environment variable. For example:
 
 ```export PYEI_OTP_PATH=/usr/lib/erlang/lib/erl_interface-X.Y/```
 
@@ -25,7 +25,7 @@ where X and Y will vary according to your Erlang/OTP version. The path to your i
 
 Please note that I used OTP 26 (version 5.5 of erl_interface) to create the included cdef file. If you have a version that differs significantly then the generated extension may not work, or may not even compile at all. A more complete tool may attempt to generate the cdef from ei.h, but this does not do that. If you run into this and want to create your own cdef for your version, you can point the script at it by setting the `PYEI_CDEF_PATH` environment variable to its absolute path.
 
-To generate the extension you can just run the script (after setting at least PYEI_PATH): `python erl_interface_ext_build.py`
+To generate the extension you can just run the script after setting the relevant environment variables: `python erl_interface_ext_build.py`
 
 If you pip install (this is not on pypi, so you'd have to do so from git or checkout the repo and do a local install) then you can also run `python -m py_erl_interface`
 
