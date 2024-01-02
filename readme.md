@@ -10,7 +10,7 @@ This was written for and tested on Linux. It will not work on Windows out of the
 If someone finds this and wants to use it on Windows, it may not be too hard to produce a windows variant of the cdef file and use whatever erl_interface uses for threading on Windows instead. Hopefully those should be the only changes needed in that case.
 
 ## tl;dr
-1. set `PYEI_OTP_PATH`` to your OTP install's erl_interface directory
+1. set `PYEI_OTP_PATH` to your OTP install's erl_interface directory
 2. run `python erl_interface_ext_build.py`
 3. drop the `.so` file whereever you want to use it
 4. import it in your python code with `from _erl_interface import ffi, lib`
