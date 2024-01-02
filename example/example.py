@@ -27,8 +27,6 @@ def main():
     # they will operate on a section of the buffer and then bump the index to the end of the section
     in_buff = ffi.new('unsigned char[100]')
         
-    res_buff = ffi.new('ei_x_buff *')
-
     with open(0, 'rb', buffering=0) as raw_in, open(1, 'wb', buffering=0) as raw_out:
         while read_from_erl(raw_in, in_buff) > 0:
             atom_str, args = decode_input_in_buffer(in_buff)
