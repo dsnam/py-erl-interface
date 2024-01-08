@@ -9,6 +9,8 @@ authors = [
 
 dependencies = [
     "cffi",
+    "pycparser",
+    "pycparserext",
 ]
 
 [build-system]

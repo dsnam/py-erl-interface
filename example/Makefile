@@ -5,4 +5,4 @@ py-erl-interface:
 	pip install -e ..
 	
 clean:
-	rm *.so *.beam *.c *.o
+	rm *.so *.beam *.c *.o *.h

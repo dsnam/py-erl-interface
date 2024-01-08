@@ -1,9 +1,14 @@
+# pycparser/pycparserext artifacts
+yacctab.py
+lextab.py
+
 # Compiled Erlang files
 *.beam
 
-# Generated .c and .o files
+# Generated C files
 *.c
 *.o
+*.h
 
 .direnv/
 
